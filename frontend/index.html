@@ -957,25 +957,27 @@ document.getElementById("area").value;
 
   if(production > consumption){
 
-    let excess = production - consumption;
+  let excess = production - consumption;
 
-    result =
-    "⚡ Excess energy detected in " + area + ", " + zone
-    ". " + excess + " MW available. " +
-    "AI recommends storing surplus energy in batteries and redistributing to nearby grids. Renewable source: " + source + ".";
+  result =
+  "⚡ Excess energy detected in " +
+  area + ", " + zone +
+  ". " + excess + " MW available. " +
+  "AI recommends storing surplus energy in batteries and redistributing power to nearby districts with higher demand. Renewable source: " + source + ".";
 
-  }
+}
 
   else if(consumption > production){
 
-    let deficit = consumption - production;
+  let deficit = consumption - production;
 
-    result =
-    "⚠ Energy deficit detected in "  + area + ", " + zone
-    ". " + deficit + " MW additional power required. " +
-    "AI recommends importing power from connected smart grids and optimizing battery usage.";
+  result =
+  "⚠ Energy deficit detected in " +
+  area + ", " + zone +
+  ". " + deficit + " MW additional power required. " +
+  "AI recommends importing energy from connected smart grids and optimizing battery usage.";
 
-  }
+}
 
   else{
 
