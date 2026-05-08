@@ -11,7 +11,7 @@ CREATE TABLE regions (
 
 CREATE TABLE energy_production (
     production_id INT PRIMARY KEY AUTO_INCREMENT,
-    region_id INT,
+    region_id INT,-5rf 
     source_type VARCHAR(50),
     energy_generated_kwh DECIMAL(10,2),
     production_time DATETIME,
