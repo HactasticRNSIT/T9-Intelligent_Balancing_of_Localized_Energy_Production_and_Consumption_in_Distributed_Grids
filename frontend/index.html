@@ -690,12 +690,28 @@ select option{
     <div class="input-box">
       <label>🌍 Select Zone</label>
 
-      <select id="zone">
-        <option>Zone A</option>
-        <option>Zone B</option>
-        <option>Zone C</option>
-        <option>Zone D</option>
-      </select>
+     <select id="zone">
+  <option>Bengaluru</option>
+  <option>Mysuru</option>
+  <option>Mangaluru</option>
+  <option>Hubballi</option>
+  <option>Belagavi</option>
+  <option>Shivamogga</option>
+  <option>Davanagere</option>
+  <option>Tumakuru</option>
+  <option>Kalaburagi</option>
+  <option>Ballari</option>
+</select>
+
+<div class="input-box">
+  <label>📍 Area & Pincode</label>
+
+  <input
+    type="text"
+    id="area"
+    placeholder="Example: Rajajinagar - 560010">
+</div>
+
     </div>
 
     <div class="input-box">
@@ -931,6 +947,9 @@ select option{
   let zone =
   document.getElementById("zone").value;
 
+  let area =
+document.getElementById("area").value;
+
   let source =
   document.getElementById("source").value;
 
@@ -941,7 +960,7 @@ select option{
     let excess = production - consumption;
 
     result =
-    "⚡ Excess energy detected in " + zone +
+    "⚡ Excess energy detected in " + area + ", " + zone
     ". " + excess + " MW available. " +
     "AI recommends storing surplus energy in batteries and redistributing to nearby grids. Renewable source: " + source + ".";
 
@@ -952,7 +971,7 @@ select option{
     let deficit = consumption - production;
 
     result =
-    "⚠ Energy deficit detected in " + zone +
+    "⚠ Energy deficit detected in "  + area + ", " + zone
     ". " + deficit + " MW additional power required. " +
     "AI recommends importing power from connected smart grids and optimizing battery usage.";
 
